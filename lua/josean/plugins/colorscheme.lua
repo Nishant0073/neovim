@@ -1,42 +1,37 @@
 return {
 	{
-		"folke/tokyonight.nvim",
-		priority = 1000, -- make sure to load this before all the other start plugins
+		"Mofiqul/dracula.nvim",
+		priority = 1000,
 		config = function()
-			local bg = "#011628"
-			-- local bg = "#000000"
-			local bg_dark = "#011423"
-			-- local bg_dark = "#000000"
-			local bg_highlight = "#143652"
-			local bg_search = "#0A64AC"
-			local bg_visual = "#275378"
-			local fg = "#CBE0F0"
-			local fg_dark = "#B4D0E9"
-			local fg_gutter = "#627E97"
-			local border = "#547998"
-
-			require("tokyonight").setup({
-				style = "night",
-				on_colors = function(colors)
-					colors.bg = bg
-					colors.bg_dark = bg_dark
-					colors.bg_float = bg_dark
-					colors.bg_highlight = bg_highlight
-					colors.bg_popup = bg_dark
-					colors.bg_search = bg_search
-					colors.bg_sidebar = bg_dark
-					colors.bg_statusline = bg_dark
-					colors.bg_visual = bg_visual
-					colors.border = border
-					colors.fg = fg
-					colors.fg_dark = fg_dark
-					colors.fg_float = fg
-					colors.fg_gutter = fg_gutter
-					colors.fg_sidebar = fg_dark
-				end,
+			require("dracula").setup({
+				italic_comment = true,
+				transparent_bg = false,
+				colors = {
+					bg = "#000000",
+					fg = "#f8f8f2",
+					selection = "#2d2d2d",
+					comment = "#6272a4",
+					red = "#ff5555",
+					orange = "#ffb86c",
+					yellow = "#f1fa8c",
+					green = "#50fa7b",
+					purple = "#bd93f9",
+					cyan = "#8be9fd",
+					pink = "#ff79c6",
+					bright_red = "#ff6e6e",
+					bright_green = "#69ff94",
+					bright_yellow = "#ffffa5",
+					bright_blue = "#d6acff",
+					bright_magenta = "#ff92df",
+					bright_cyan = "#a4ffff",
+					bright_white = "#ffffff",
+					menu = "#000000",
+					visual = "#3e4452",
+					gutter_fg = "#4b5263",
+					nontext = "#3b4048",
+				},
 			})
-			-- load the colorscheme here
-			vim.cmd([[colorscheme tokyonight]])
+			vim.cmd([[colorscheme dracula]])
 		end,
 	},
 }

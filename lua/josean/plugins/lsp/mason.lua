@@ -37,8 +37,8 @@ return {
 				"prismals",
 				"pyright",
 				"csharp_ls",
-				"clangd",
 				"jdtls",
+				"omnisharp",
 			},
 		})
 		mason_tool_installer.setup({
@@ -47,8 +47,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"csharpier",
-				"clang-format",
+				"csharpier", -- charp formatter
 			},
 		})
 	end,
